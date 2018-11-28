@@ -245,6 +245,7 @@ result page
     background-color: hsla(1deg, 0%, 100%, 0.6);
     box-shadow: 2px 2px 2px grey;
     animation: createCards .5s linear;
+    border-radius: 5px;
 }
 
 @keyframes createCards{
