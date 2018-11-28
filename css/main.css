@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto Slab');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background-color: #e9b5b9;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16vw 0;
+}
+
+footer {
+    height: 100px;
+    text-align: center;
+    margin-top: 3rem;
+    
+}
+
+.title-img {
+    width: 60%;
+    margin: 3rem;
+    transition: all 0.5s ease-in;
+}
+
+.iconic-property-stroke,
+.iconic-property-fill {
+    fill: #777;
+    stroke: #555;
+}
+
+.searchButtonDiv {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-size: 1rem;
+    transition: all 0.5s ease-in;
+    margin-left: 40px;
+    transition: all 0.5s ease-in;
+}
+
+.searchButtonDiv:hover {
+    width: 70%;
+    transition: all 0.5s ease-in;
+}
+
+.searchButtonSpan,
+.changeTypeSpan {
+    display: inherit;
+}
+
+#search-button,
+#changeType {
+    height: 25px;
+    position: relative;
+    right: 32px;
+    cursor: pointer;
+}
+
+#back-button {
+    transform: rotate(180deg);
+    height: 25px;
+    opacity: 0.5;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+#back-button:hover {
+    opacity: 0.75;
+}
+
+#search-input {
+    width: 70%;
+    height: 25px;
+    padding: 1px 30px 1px 5px;
+    font-size: 1rem;
+    transition: all 0.5s ease-in;
+    overflow: hidden;
+}
+
+.logo {
+    width: 15%;
+    margin-top: 40px;
+}
+
+
+#search-input:hover {
+    width: 100%;
+    height: 30px;
+    transition: all 0.5s ease-in;
+}
+
+/***************************
+
+modle-window
+
+******************************/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    width: 500px;
+    height: 280px;
+    z-index: 200;
+    top: calc((100% - 280px)/2);
+    left: calc((100% - 500px)/2);
+    line-height: 1.5;
+    color: #555;
+    background-color: #eee;
+}
+
+.yes {
+    display: block;
+}
+
+.no {
+    display: none;
+}
+
+.off {
+    transform: translateY(-400%);
+}
+
+.on {
+    transform: translateY(0);
+}
+
+.cancelButton,
+.saveButton {
+    width: 120px;
+    position: absolute;
+    border: none;
+    background-color: #e9b5b9;
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem 2rem;
+    font-size: 1rem;
+}
+
+.saveButton {
+    bottom: 1rem;
+    right: 4rem;
+}
+
+.cancelButton {
+    bottom: 1rem;
+    left: 4rem;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #e9b5b9;
+    color: white;
+    text-align: center;
+}
+
+.modal-radio {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+
+
+/****************
+
+page 1 - search input
+
+****************/
+
+.hidden {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0 5px 10px 5px;
+    justify-content: space-between;
+    align-content: center;
+    background-color: antiquewhite;
+    transition: all 0.5s ease-in;
+    box-shadow: 2px 2px 2px grey;
+    
+}
+
+.hidden .title-img {
+    width: 20vw;
+    transition: all 0.5s ease-in;
+}
+
+.hidden .searchButtonDiv {
+    top: 0;
+    left: 30px;
+    transition: all 0.5s ease-in;
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.5s ease-in;
+}
+
+.hidden #search-input{
+    width: 50%;
+    transition: all 0.5s ease-in;
+}
+
+.hidden #search-input:hover {
+    width: 70%;
+    transition: all 0.5s ease-in;
+}
+
+
+/****************
+
+page 1
+
+****************/
+
+
+.imageSection {
+    float: left;
+    height: 200px;
+    width: 133.4px;
+    margin-right: 1rem;
+}
+
+.movieCard {
+    line-height: 15px;
+    margin: 5px;
+    height: 200px;
+    background-color: hsla(1deg, 0%, 100%, 0.6);
+    box-shadow: 2px 2px 2px grey;
+}
+
+.title {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    padding-top: 1rem;
+    text-align: justify;
+    text-shadow: 1px 1px 1px grey;
+    font-family: "Roboto Slab", Helvetica, Arial, serif;
+}
+
+.date,
+.rating {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+span img {
+    width: 16px;
+    opacity: 0.7;
+}
+
+.overview {
+    text-align: justify;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-right: 1rem;
+    line-height: 20px;
+}
+
+
+/*************
+
+media
+
+*************/
+
+@media (max-width:600px) {
+    .hidden .title-img{
+        display: none;
+    }
+    
+}
+
+
+
+@media (min-width:700px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        margin: 8vw 0;
+    }
+
+    .title {
+        padding-top: 0;
+    }
+
+    .hidden .title-img {
+        width: 17vw;
+        display: inherit;
+        margin: 0 0 0 70px;
+        transition: all 0.5s ease-in;
+        
+    }
+
+    .logo {
+        width: 10%;
+    }
+}
+
+@media (min-width:1000px) {
+
+    header {
+        margin: 4vw 0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .title {
+        padding-top: 0;
+    }
+
+    .hidden .title-img {
+        width: 11vw;
+        display: inherit;
+        margin: 0 0 0 200px;
+        transition: all 0.5s ease-in;
+    }
+}
