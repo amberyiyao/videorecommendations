@@ -18,7 +18,7 @@ footer {
     height: 100px;
     text-align: center;
     margin-top: 3rem;
-    
+
 }
 
 .title-img {
@@ -195,7 +195,7 @@ page 1 - search input
     background-color: antiquewhite;
     transition: all 0.5s ease-in;
     box-shadow: 2px 2px 2px grey;
-    
+
 }
 
 .hidden .title-img {
@@ -213,7 +213,7 @@ page 1 - search input
     transition: all 0.5s ease-in;
 }
 
-.hidden #search-input{
+.hidden #search-input {
     width: 50%;
     transition: all 0.5s ease-in;
 }
@@ -226,7 +226,7 @@ page 1 - search input
 
 /****************
 
-page 1
+result page
 
 ****************/
 
@@ -244,13 +244,14 @@ page 1
     height: 200px;
     background-color: hsla(1deg, 0%, 100%, 0.6);
     box-shadow: 2px 2px 2px grey;
+    border: 8px solid white;
 }
 
 .title {
     font-size: 1rem;
     color: white;
     font-weight: 600;
-    padding-top: 1rem;
+    margin-right: 1rem;
     text-align: justify;
     text-shadow: 1px 1px 1px grey;
     font-family: "Roboto Slab", Helvetica, Arial, serif;
@@ -286,10 +287,34 @@ media
 *************/
 
 @media (max-width:600px) {
-    .hidden .title-img{
+    .hidden .title-img {
         display: none;
     }
-    
+
+    .modal {
+        width: 300px;
+        height: 180px;
+        top: calc((100% - 180px)/2);
+        left: calc((100% - 300px)/2);
+        line-height: 1;
+    }
+
+    .modal h2 {
+        font-size: 1rem;
+    }
+
+    .cancelButton,
+    .saveButton {
+        width: 60px;
+        padding: 0.25rem 1rem;
+        font-size: 0.7rem;
+    }
+
+    .modal-radio {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
 }
 
 
@@ -313,7 +338,7 @@ media
         display: inherit;
         margin: 0 0 0 70px;
         transition: all 0.5s ease-in;
-        
+
     }
 
     .logo {
